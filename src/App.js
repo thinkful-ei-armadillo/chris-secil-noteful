@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {Component} from 'react';
+import Main from './Main.js';
+import {Route} from 'react-router-dom'; 
+import Store from './dummy-store.js'
 
-function App() {
+class App extends Component {
+  state = {...Store}
+  render(){
   return (
     <main className='App'>
-      {/* content goes here */}
+      <Route exact path="/" component={Main} />
     </main>
-  );
+  )}
 }
 
 export default App;
