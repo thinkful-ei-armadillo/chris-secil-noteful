@@ -4,7 +4,7 @@ class Note extends Component {
     state = {};
     findId() {
         console.log(this.props);
-    console.log(this.props.match.params.noteid);
+        console.log(this.props.match.params.noteid);
     
     }
 render(){
