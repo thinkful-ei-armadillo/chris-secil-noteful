@@ -1,17 +1,31 @@
 import React from 'react'; 
+import Note from './Note';
 
 function Main(props){
+    const notes = props.state.notes;
+    // const folders = props.state.folders;
     return (
         <div>
-            <header>
-                <h1>Noteful</h1>
-            </header>
             <main>
-                {/*note component */}
+                {/* {props.notes.map(note => {
+                return (
+                    <li>
+                        <h2>{note.name}</h2>
+                        <p>Date modified {note.modified}</p>
+                    </li> */}
+                {notes}
                 <button>Add note</button>
             </main>
-            <div>
-                {/*folder component*/}
+            <div className="folders">
+                <ul>
+                {/* {folders.map(folder => {
+                    return (
+                        <li>
+                            {folder.name}
+                        </li>
+                    ); */}
+                })}
+                </ul>
                 <button>Add Folder</button>
             </div>
         </div>
