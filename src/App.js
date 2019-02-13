@@ -20,9 +20,10 @@ class App extends Component {
         <Route exact path="/"
         render = {()=> <Folderbar folders={this.state.folders}/>} />
         <Route exact path="/:folderid"
-        render = {(props)=> <Folderbar match={props.match} folders={this.state.folders}/>} />
+        render = {(props)=> <Folderbar folders={this.state.folders.filter(folder => folder.id === props.match.params.id)}
+        notes={this.state.notes.filter(note => note.folderId === props.match.params.folderId)} />}/>
         <Route exact path="/notes/:noteid"
-        render = {(props)=> <Note match={props.match} notes={this.state.notes}/>} />
+        render = {(props)=> <Note notes={this.state.notes}/>} />
     </main>
   )}
 }
