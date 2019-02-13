@@ -6,7 +6,7 @@ function Main (props){
         <div>
             <main>
                 <ul>
-                    {this.props.notes.map((note, index) => {
+                    {props.notes.map((note, index) => {
                     return (
                             <li key={index} >
                             <Link to={`/notes/${note.id}`}>

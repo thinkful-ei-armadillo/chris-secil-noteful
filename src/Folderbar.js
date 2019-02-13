@@ -2,10 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 function Folderbar (props){
+    console.log(props.match.params.folderid);
     return (
     <div className="folders">
         <ul>
-            {this.props.folders.map((folder,index) => {
+            {props.folders.map((folder,index) => {
                 return(
                     <li key={index}>
                     <Link to={`/${folder.id}`}>
