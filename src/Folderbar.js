@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom';
 
-class Folderbar extends Component{
-  render(){
+function Folderbar (props){
     return (
     <div className="folders">
         <ul>
@@ -19,5 +18,5 @@ class Folderbar extends Component{
         <button>Add Folder</button>
     </div>);
 }
-}
+
 export default Folderbar; 

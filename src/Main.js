@@ -1,8 +1,7 @@
 import React, {Component} from 'react'; 
 import {Link} from 'react-router-dom'; 
 
-class Main extends Component{
-    render(){
+function Main (props){
     return (
         <div>
             <main>
@@ -23,7 +22,6 @@ class Main extends Component{
             </main>
         </div>
     )
-}
 }
 
 export default Main; 

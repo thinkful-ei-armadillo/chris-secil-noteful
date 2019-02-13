@@ -1,13 +1,9 @@
-import React, {Component} from 'react'; 
+import React from 'react'; 
 
-class Note extends Component {
-    state = {};
-    findId() {
-        console.log(this.props);
+function Note (props) {
+    console.log(this.props);
     console.log(this.props.match.params.noteid);
     
-    }
-render(){
     const note=this.props.notes.find(note => 
         note.id === this.props.match.params.noteid);
         console.log(note);
@@ -19,7 +15,6 @@ render(){
             <button>Delete Note</button>
         </div>
     )
-}
 }
 
 export default Note; 
